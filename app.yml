@@ -1,0 +1,54 @@
+config:
+  hyperparams:
+  - name: assembly
+    type: STRING
+    required: false
+    default: hg38
+    description: Reference genome assembly used by OpenCRAVAT.
+  - name: annotators
+    type: STRING
+    required: false
+    default: clinvar
+    description: Comma-separated OpenCRAVAT annotators to run.
+  - name: reporters
+    type: STRING
+    required: false
+    default: text
+    description: Comma-separated OpenCRAVAT reporters to generate.
+  - name: preview_rows
+    type: INTEGER
+    required: false
+    default: 100
+    minValue: 1
+    description: Number of rows to include in preview outputs if previews are added
+      later.
+  input:
+  - name: variant_file
+    type: PATH
+    required: true
+    description: Path to the input variant file (for example VCF, TSV, or TXT) passed
+      to OpenCRAVAT.
+  output:
+  - name: status_json
+    type: JSON
+    description: OpenCRAVAT run status JSON file.
+  - name: log_file
+    type: TEXT
+    description: OpenCRAVAT log output file.
+  - name: err_file
+    type: TEXT
+    description: OpenCRAVAT error output file.
+  - name: report_files
+    type: JSON
+    description: List of generated OpenCRAVAT output files.
+  - name: report
+    type: HTML
+    description: HTML summary report of the OpenCRAVAT run.
+info:
+  name: tool-opencravat
+  slug: tool-opencravat
+  type: SELF_LEARNED
+  sourceUrl: https://github.com/FedLearnNet/tool-opencravat
+  shortDescription: Annotates genomic variant files with OpenCRAVAT and exports run
+    status, logs, and a summary report.
+  longDescription: null
