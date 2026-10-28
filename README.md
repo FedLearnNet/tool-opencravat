@@ -1,4 +1,4 @@
-# tool-opencravat
+# opencravat
 
 Annotates genomic variant files with OpenCRAVAT and exports run status, logs, and a summary report.
 

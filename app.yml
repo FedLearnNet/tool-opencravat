@@ -45,8 +45,8 @@ config:
     type: HTML
     description: HTML summary report of the OpenCRAVAT run.
 info:
-  name: tool-opencravat
-  slug: tool-opencravat
+  name: opencravat
+  slug: opencravat
   type: SELF_LEARNED
   sourceUrl: https://github.com/FedLearnNet/tool-opencravat
   shortDescription: Annotates genomic variant files with OpenCRAVAT and exports run
